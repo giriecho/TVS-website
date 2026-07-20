@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import hero from "@/assets/hero-cinema.gif";
-import heroMobile from "@/assets/hero-cinema-responsive.gif";
+import heroMobile from "@/assets/hero-cinema.jpg";
 import balwanth from "@/assets/hey-balwanth-poster.jpg";
 import cinematicBanner from "@/assets/cinematic-banner.jpg";
 import pillarNarrative from "@/assets/pillar-narrative.jpg";
@@ -27,12 +27,12 @@ export default function Home() {
           height={1088}
           className="absolute inset-0 h-full w-full object-cover hidden sm:block"
         />
-        {/* Hero GIF - Mobile responsive version */}
+        {/* Hero static image - Mobile version */}
         <img
           src={heroMobile}
           alt=""
-          width={1080}
-          height={1920}
+          width={1920}
+          height={1088}
           className="absolute inset-0 h-full w-full object-cover block sm:hidden"
         />
         
