@@ -36,21 +36,24 @@ export default function Home() {
           className="absolute inset-0 h-full w-full object-cover block sm:hidden"
         />
         
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/90" />
+        {/* Desktop overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/30 to-background/90 hidden sm:block" />
+        {/* Mobile overlay - stronger for better text visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/95 block sm:hidden" />
         <div className="absolute inset-0 grain" />
 
         <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-16 lg:px-10 lg:pt-28">
           <div className="max-w-3xl animate-fade-up">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-[0.3em] text-primary">
+            <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/20 backdrop-blur-sm px-4 py-1.5 text-xs font-bold uppercase tracking-[0.3em] text-primary drop-shadow-lg">
               <span className="h-1.5 w-1.5 animate-glow-pulse rounded-full bg-primary" />
               Est. Hyderabad
             </span>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] sm:text-7xl lg:text-8xl">
-              Where <span className="text-gradient-gold">Imagination</span>
+            <h1 className="mt-6 font-display text-5xl leading-[1.05] font-bold sm:text-7xl lg:text-8xl text-foreground drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+              Where <span className="text-gradient-gold drop-shadow-[0_2px_10px_rgba(212,175,55,0.5)]">Imagination</span>
               <br />
               Meets the Screen.
             </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            <p className="mt-6 max-w-xl text-base leading-relaxed font-medium sm:text-lg text-foreground drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-muted-foreground sm:drop-shadow-none">
               Trishul Visionary Studios is a premier production house dedicated to crafting
               powerful narratives, cutting-edge visuals and cinematic experiences that
               resonate globally.
@@ -65,7 +68,7 @@ export default function Home() {
               </Link>
               <Link
                 to="/projects"
-                className="group inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/40 px-7 py-3.5 text-sm font-semibold backdrop-blur transition-colors hover:border-primary hover:text-primary"
+                className="group inline-flex items-center gap-2 rounded-full border border-border/80 bg-background/60 backdrop-blur px-7 py-3.5 text-sm font-semibold transition-colors hover:border-primary hover:text-primary"
               >
                 <Play className="h-4 w-4" />
                 Watch our work
