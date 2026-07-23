@@ -13,7 +13,7 @@ if (fs.existsSync(s3DistPath)) {
 fs.mkdirSync(s3DistPath, { recursive: true });
 
 // Copy client assets
-const clientPath = path.join(__dirname, 'dist', 'client');
+const clientPath = path.join(__dirname, 'dist');
 const clientFiles = fs.readdirSync(clientPath, { recursive: true });
 
 clientFiles.forEach(file => {
@@ -28,7 +28,7 @@ clientFiles.forEach(file => {
 });
 
 // Create index.html for each route
-const routes = ['/', '/about', '/services', '/projects', '/contact'];
+const routes = ['/', '/about', '/services', '/projects', '/gallery', '/contact', '/story-submission'];
 
 // Base HTML template
 const createHTML = (route) => `<!DOCTYPE html>
@@ -50,8 +50,8 @@ const createHTML = (route) => `<!DOCTYPE html>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="/assets/styles-oeSjD-Tq.css">
-  <script type="module" src="/assets/index-DxK9nuF2.js"></script>
+  <link rel="stylesheet" href="/assets/index-D8WeQ_ZV.css">
+  <script type="module" src="/assets/index-De5OqwDW.js"></script>
 </head>
 <body>
   <div id="root"></div>

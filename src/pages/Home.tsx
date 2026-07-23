@@ -7,6 +7,7 @@ import pillarNarrative from "@/assets/pillar-narrative.jpg";
 import pillarProduction from "@/assets/pillar-production.jpg";
 import pillarCollaboration from "@/assets/pillar-collaboration.jpg";
 import { ArrowRight, Film, Sparkles, Users, Play } from "lucide-react";
+import { HeroSlider } from "@/components/HeroSlider";
 
 const pillars = [
   { icon: Film, title: "Narrative Excellence", body: "Script-to-screen storytelling with depth, intention and cinematic craft.", bg: pillarNarrative, alt: "Vintage script pages bathed in warm amber light" },
@@ -176,10 +177,11 @@ export default function Home() {
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="relative order-2 lg:order-1">
             <div className="absolute -inset-6 rounded-3xl bg-gold-gradient opacity-30 blur-2xl" />
-            <div className="relative overflow-hidden rounded-2xl border border-border/60 shadow-card">
-              <img src={balwanth} alt="Hey Balwanth poster" className="h-full w-full object-cover" loading="lazy" width={1200} height={1600} />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/70 to-transparent p-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary">Now Streaming on ZEE5</p>
+            <div className="relative overflow-hidden rounded-2xl border border-border/60 shadow-card h-[400px] sm:h-[500px] lg:h-[700px]">
+              {/* Project Image Slider */}
+              <HeroSlider />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/70 to-transparent p-6 z-10">
+                <p className="text-xs uppercase tracking-[0.3em] text-primary font-bold">Now Streaming on ZEE5</p>
               </div>
             </div>
           </div>
